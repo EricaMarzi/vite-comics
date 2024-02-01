@@ -1,12 +1,14 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
     name: 'DC Comics',
     components: {
         AppHeader,
         AppMain,
+        AppFooter,
     }
 }
 </script>
@@ -14,6 +16,8 @@ export default {
 <template>
     <AppHeader />
     <AppMain />
+    <div class="bonus"></div> <!--Stai qui così ti vedo-->
+    <AppFooter />
 </template>
 
 <style>
@@ -34,7 +38,6 @@ ul {
 }
 
 a {
-    color: #1c1c1c;
     text-decoration: none;
 }
 
@@ -42,7 +45,11 @@ a {
 .container {
     width: 1280px;
     margin: 0 auto;
-    height: 100px;
-    /*da togliere a fine costruzione */
+}
+
+/*Per costruzione da togliere */
+.bonus {
+    height: 150px;
+    background-color: #0282f9;
 }
 </style>

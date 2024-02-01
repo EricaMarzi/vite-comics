@@ -55,5 +55,10 @@ ul.navbar {
     letter-spacing: -1px;
     font-weight: 600;
     font-size: 14px;
+
+}
+
+.navbar a {
+    color: #1c1c1c;
 }
 </style>
