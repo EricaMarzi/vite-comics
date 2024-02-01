@@ -13,4 +13,27 @@ export default {
     <AppHeader />
 </template>
 
-<style></style>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Generics */
+body {
+    background-color: #1c1c1c;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+/*Utility */
+</style>

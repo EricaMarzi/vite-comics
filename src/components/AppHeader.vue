@@ -5,8 +5,59 @@ export default {
 </script>
 
 <template>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae eius quas soluta incidunt, eaque facilis in
-    ducimus obcaecati culpa ipsa magni rem delectus tenetur porro nisi maxime consequuntur et perspiciatis.
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/dc-comics-1/img/dc-logo.png" alt="">
+            </div>
+
+            <div>
+                <ul class="navbar">
+                    <li><a href="#">Characters</a></li>
+                    <li><a href="#">Comics</a></li>
+                    <li><a href="#">Movie</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Collectibles</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Fans</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 </template>
 
-<style></style>
+<style scoped>
+header {
+    width: 100%;
+    background-color: white;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.logo img {
+    width: auto;
+    height: 80px;
+}
+
+ul.navbar {
+    display: flex;
+    gap: 30px;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-size: 14px;
+}
+</style>
