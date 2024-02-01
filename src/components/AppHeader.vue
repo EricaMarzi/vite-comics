@@ -1,6 +1,11 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data() {
+        return {
+            links: ['Characters', 'Comics', 'Movie', 'TV', 'Games', 'Collectibles', 'Videos', 'Fans', 'News', 'Shop']
+        }
+    }
 }
 </script>
 
@@ -13,16 +18,7 @@ export default {
 
             <div>
                 <ul class="navbar">
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Movie</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Collectibles</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Fans</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li v-for="link in links"><a href="#">{{ link }}</a></li>
                 </ul>
             </div>
         </div>
@@ -47,18 +43,24 @@ header {
     height: 80px;
 }
 
-ul.navbar {
+.navbar {
     display: flex;
     gap: 30px;
 
     text-transform: uppercase;
     letter-spacing: -1px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
 
 }
 
 .navbar a {
     color: #1c1c1c;
+    padding: 45px 0;
+}
+
+.navbar a:hover {
+    color: #0282f9;
+    border-bottom: 3px solid #0282f9;
 }
 </style>
