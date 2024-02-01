@@ -20,39 +20,7 @@ export default {
     <AppFooter />
 </template>
 
-<style>
-/* <style lang="scss"> */
-/* @use './assets/scss/style.scss' */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*Generics */
-body {
-    background-color: #1c1c1c;
-    font-family: 'Open Sans', sans-serif;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-/*Utility */
-.container {
-    width: 1280px;
-    margin: 0 auto;
-}
-
-/*Per costruzione da togliere */
-.bonus {
-    height: 150px;
-    background-color: #0282f9;
-}
+<style lang="scss">
+@use './assets/scss/style.scss'
 </style>
