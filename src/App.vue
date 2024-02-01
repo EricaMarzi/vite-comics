@@ -1,16 +1,19 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
     name: 'DC Comics',
     components: {
-        AppHeader
+        AppHeader,
+        AppMain,
     }
 }
 </script>
 
 <template>
     <AppHeader />
+    <AppMain />
 </template>
 
 <style>
@@ -36,4 +39,10 @@ a {
 }
 
 /*Utility */
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100px;
+    /*da togliere a fine costruzione */
+}
 </style>

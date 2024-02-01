@@ -36,14 +36,10 @@ header {
 }
 
 .container {
-    width: 1280px;
-    margin: 0 auto;
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 .logo img {
