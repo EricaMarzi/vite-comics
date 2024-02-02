@@ -6,14 +6,19 @@ export default {
 
 <template>
     <main class="container">
-        <h1>Content Here</h1>
+        <div class="row">
+
+            <div class="card">
+
+            </div>
+        </div>
     </main>
 </template>
 
 <style scoped>
-/*In costruzione */
-h1 {
-    color: white;
-    padding: 50px;
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: white;
 }
 </style>
