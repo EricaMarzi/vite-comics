@@ -1,6 +1,12 @@
 <script>
+import UpperFooterLinks from './UpperFooterLinks.vue';
+
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    components: { UpperFooterLinks },
+    props: {
+        footerLinks: Array
+    }
 }
 </script>
 
@@ -10,19 +16,19 @@ export default {
 
             <div class="upper-footer">
                 <div class="footer-list">
-                    <div class="col">
-
-                        <h3>DC Comics</h3>
+                    <UpperFooterLinks v-for="(link, i) in footerLinks" :key="i" :title="link.title" :links="link.url" />
+                    <!-- <div v-for="(link, i) in footerLinks" :key="i" class="col"> -->
+                    <!-- <h3>{{ link.title }}</h3>
                         <ul>
-                            <li><a href="#">Characters</a></li>
+                            <li><a href="#">Charachters</a></li>
                             <li><a href="#">Comics</a></li>
                             <li><a href="#">Movies</a></li>
                             <li><a href="#">TV</a></li>
                             <li><a href="#">Games</a></li>
                             <li><a href="#">Videos</a></li>
                             <li><a href="#">News</a></li>
-                        </ul>
-                        <h3>Shop</h3>
+                        </ul> -->
+                    <!-- <h3>Shop</h3>
                         <ul>
                             <li><a href="#">Shop DC</a></li>
                             <li><a href="#">Shop DC Collectibles</a></li>
@@ -55,14 +61,13 @@ export default {
                             <li><a href="#">DC Universe</a></li>
                             <li><a href="#">DC Power Visa</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="logo-bg">
                     <img src="../assets/dc-comics-1/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
         </div>
-
 
         <div class="bottom-footer">
             <div class="container">
@@ -144,7 +149,7 @@ footer {
     width: calc(100% / 3);
 }
 
-h3 {
+/* h3 {
     color: white;
     text-transform: uppercase;
 }
@@ -152,7 +157,7 @@ h3 {
 .upper-footer a {
     color: #797979;
     font-size: 12px;
-}
+} */
 
 /*DC Logo */
 .logo-bg img {

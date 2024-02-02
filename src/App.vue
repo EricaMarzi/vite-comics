@@ -5,6 +5,56 @@ import AppFooter from './components/AppFooter.vue'
 
 export default {
     name: 'DC Comics',
+    data: () => ({
+        footerLinks: [
+            {
+                title: 'DC Comics',
+                links: [
+                    { url: '#', text: 'Charachters' },
+                    { url: '#', text: 'Comics' },
+                    { url: '#', text: 'Movies' },
+                    { url: '#', text: 'TV' },
+                    { url: '#', text: 'Games' },
+                    { url: '#', text: 'Videos' },
+                    { url: '#', text: 'News' }
+                ]
+            },
+            {
+                title: 'Shop',
+                links: [
+                    { url: '#', text: 'Shop DC' },
+                    { url: '#', text: 'Shop DC Collectibles' }
+                ]
+            },
+            {
+                title: 'DC',
+                links: [
+                    { url: '#', text: 'Term Of Use' },
+                    { url: '#', text: 'Privacy policy (New)' },
+                    { url: '#', text: 'Ad Choices' },
+                    { url: '#', text: 'Advertising' },
+                    { url: '#', text: 'Jobs' },
+                    { url: '#', text: 'Subscriptions' },
+                    { url: '#', text: 'Talent Workshops' },
+                    { url: '#', text: 'CPCS Certicates' },
+                    { url: '#', text: 'Ratings' },
+                    { url: '#', text: 'Shop Help' },
+                    { url: '#', text: 'Contact Us' }
+                ]
+            },
+            {
+                title: 'Sites',
+                links: [
+                    { url: '#', text: 'DC' },
+                    { url: '#', text: 'MAD Magazine' },
+                    { url: '#', text: 'DC Kids' },
+                    { url: '#', text: 'DC Universe' },
+                    { url: '#', text: 'DC Power Visa' }
+                ]
+            }
+        ]
+
+    }),
     components: {
         AppHeader,
         AppMain,
@@ -17,7 +67,7 @@ export default {
     <AppHeader />
     <AppMain />
     <div class="bonus"></div> <!--Stai qui così ti vedo-->
-    <AppFooter />
+    <AppFooter :footerLinks="footerLinks" />
 </template>
 
 
