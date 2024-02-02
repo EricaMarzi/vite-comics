@@ -1,18 +1,20 @@
 <script>
 import UpperFooterLinks from './UpperFooterLinks.vue';
 
+
 export default {
     name: 'AppFooter',
     components: { UpperFooterLinks },
     props: {
-        footerLinks: Array
+        footerLinks: Array,
+
     }
 }
 </script>
 
 <template>
     <footer>
-
+        <!--Upper Footer-->
         <div class="container">
             <div class="upper-footer">
                 <div class="footer-list">
@@ -31,11 +33,12 @@ export default {
             <div class="container">
                 <div class="flex">
                     <button class="sing">Sign-up now!</button>
-                    <div class="follow-social">
+                    <div class="follow-socials">
                         <ul>
                             <li>
                                 <h2>Follow us</h2>
                             </li>
+
                             <li>
                                 <a href="#">
                                     <div class="social">
@@ -107,7 +110,7 @@ footer {
     width: calc(100% / 3);
 }
 
-/* h3 {
+h3 {
     color: white;
     text-transform: uppercase;
 }
@@ -115,7 +118,7 @@ footer {
 .upper-footer a {
     color: #797979;
     font-size: 12px;
-} */
+}
 
 /*DC Logo */
 .logo-bg img {
@@ -152,13 +155,13 @@ button.sing {
     cursor: pointer;
 }
 
-.follow-social h2 {
+.follow-socials h2 {
     text-transform: uppercase;
     color: #0282f9;
     letter-spacing: -2px;
 }
 
-.follow-social ul {
+.follow-socials ul {
     display: flex;
     gap: 20px;
 }
