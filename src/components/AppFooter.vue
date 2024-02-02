@@ -16,7 +16,8 @@ export default {
 
             <div class="upper-footer">
                 <div class="footer-list">
-                    <UpperFooterLinks v-for="(link, i) in footerLinks" :key="i" :title="link.title" :links="link.url" />
+                    <UpperFooterLinks v-for="(link, i) in footerLinks" :key="i" :title="link.title"
+                        :links="link.links.url" />
                     <!-- <div v-for="(link, i) in footerLinks" :key="i" class="col"> -->
                     <!-- <h3>{{ link.title }}</h3>
                         <ul>
