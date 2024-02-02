@@ -12,8 +12,8 @@ export default {
     <div class="col">
         <h3>{{ title }}</h3>
         <ul>
-            <li v-for="link in links">
-                <a href="#">{{ link.text }}</a>
+            <li v-for="(link, i) in links" :key="i">
+                <a href="">{{ link.text }}</a>
             </li>
         </ul>
     </div>
