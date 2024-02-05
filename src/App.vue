@@ -22,7 +22,7 @@ export default {
 
 <template>
     <AppHeader />
-    <AppMain />
+    <AppMain :comics="comics" />
     <div class="bonus"></div> <!--Stai qui così ti vedo-->
     <AppFooter :footerLinks="footerLinks" />
 </template>

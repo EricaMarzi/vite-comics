@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    props: {
+        comics: Array
+    }
 }
 </script>
 
@@ -8,25 +11,22 @@ export default {
     <main class="container">
         <div class="row">
             <div class="col">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+                <div class="card" v-for="(comic, i) in comics" :key="i">
+                    <img :src="comic.thumb" :alt="comic.series">
+                    <label>
+                        <div class="title">{{ comic.series }}</div>
+                    </label>
+                </div>
             </div>
         </div>
     </main>
 </template>
 
 <style scoped>
+main {
+    height: 850px;
+}
+
 .row {
     padding: 50px 0;
     width: 100%;
@@ -40,9 +40,22 @@ export default {
 }
 
 .card {
-    margin: 1ren;
     width: calc(100% / 6 - 2rem);
-    height: 190px;
-    background-color: white;
+    height: 360px;
+
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+label .title {
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: white;
+
 }
 </style>
